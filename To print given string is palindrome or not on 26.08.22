@@ -1,0 +1,34 @@
+#include<stdio.h>
+void main(){
+	char str[100];
+	int i,j,flag=0,size=0;
+	scanf("%s",&str);
+	for(i=0;str[i]!='\0';i++){
+	 	++size;
+	}
+	for(i=0,j=size-1;i!=size;i++){
+	 if(str[i]!=str[j]){	
+		flag=1;
+		break;
+	}
+	j--;
+	}
+	if(flag==1){
+		printf("not palindrome");
+	}
+	else{
+		printf("palindrome");
+	}
+}
+
+Example1:
+Input:
+madam
+Output:
+palindrome
+
+Example2:
+Input:
+apple
+Output:
+not palindrome
