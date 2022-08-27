@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n;
+    char str1[99],str2[99];
+    printf("Enter two strings:\n");
+    scanf("%[^\n]%*c",&str1);
+    scanf("%[^\n]%*c",&str2);
+    for(i=0;str1[i]!='\0';i++){
+        if(str1[i]==str2[i]){
+            n=0;
+        }
+        else{
+            n++;
+            break;
+        }
+    }
+    if(n==0){
+        printf("anagrams");
+    }
+    else
+     printf("not anagrams");
+    return 0;
+}
+
+
+Input:
+Enter two strings:
+b e l o w
+b e l o w
+Output:
+anagrams
